@@ -13,8 +13,14 @@
     --black: #101010;
     --main-color: #040427;
     --secondary-color: #07024a;
-    --bg-color: linear-gradient(180deg, rgba(13, 8, 30, 1) 25%, rgba(10, 6, 23, 1) 50%, rgba(7, 4, 15, 1) 75%);
+    --third-color: #060522;
 
+    --bg-color: linear-gradient(
+        180deg, rgba(13, 8, 30, 1) 25%, 
+        rgba(10, 6, 23, 1) 50%, 
+        rgba(7, 4, 15, 1) 75%);
+
+    --zinc: #52595a;
 }
 
 body {
@@ -28,7 +34,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border-bottom: 1px solid var(--white);
+    border-bottom: 1px solid var(--zinc);
 }
 
 .logo {
@@ -44,8 +50,9 @@ nav {
     width: 100%;
     height: 100%;
     gap: 30px;
+    margin-right: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     list-style-type: none;
 }
@@ -58,6 +65,45 @@ nav {
     color: var(--white);
 }
 
+/* config for the toggle Theme */
+.themeToggle input {
+    opacity: 0;
+    position: absolute;
+}
+
+.themeToggle input:checked+.label .box {
+    transform: translateX(2.2rem);
+}
+
+.themeToggle input:checked+.label {
+    background-color: #f9f9f9;
+}
+
+.themeText {
+    display: none;
+}
+
+.label {
+    display: flex;
+    background: #220272;
+    width: 3.5rem;
+    border-radius: 1.5rem;
+    padding: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    margin-left: 5px;
+}
+
+.box {
+    background-color: #13131f;
+    height: 0.9rem;
+    width: 0.9rem;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+/* End config for toggle Theme */
+
 /* config for the toggleMenu */
 .menuToggle {
     position: absolute;
@@ -67,7 +113,7 @@ nav {
 }
 
 nav>input {
-    display: block;
+    display: none;
     width: 35px;
     height: 30px;
     position: fixed;
@@ -120,15 +166,29 @@ nav>input:checked~.menuToggle>span:nth-last-child(2) {
 /* End config for toggleMenu */
 
 header {
-    height: 80vh;
-}
-
-.main-header {
+    height: 75vh;
     display: flex;
-    height: 100vh;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-lg-text {
+    font-size: 35px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-sm-text {
+    font-style: italic;
 }
 
 #main-left {
@@ -148,19 +208,15 @@ header {
     border-radius: 5px;
 }
 
-.main-span {
-    font-size: 35px;
-    font-weight: 500;
-}
-
 .icons-social {
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 20px;
     background-color: var(--white);
     border-radius: 7px;
     width: 40%;
-    align-items: center;
-    justify-content: center;
+    box-shadow: 7px 6px 50px 2px rgba(200, 200, 200, 0.12);
 }
 
 .icons-social a {
@@ -170,7 +226,7 @@ header {
 
 #main-right {
     margin-bottom: 100px;
-
+    
 }
 
 .main-img {
@@ -180,7 +236,7 @@ header {
 
 .about-me-section {
     height: 92vh;
-
+    
 }
 
 .container-about-me {
@@ -225,44 +281,61 @@ header {
     text-align: left;
 }
 
-.photo-about-me {
+.photo-about-me img {
     width: 150px;
     height: 150px;
     margin-top: -50px;
     border-radius: 50%;
-    background-image: url(/img/Foto-perfil-portifólio-Willian-Daniel.jpg);
     background-size: cover;
     background-position: 0px -7px;
     border: 2px solid #fff;
 }
+.about-me-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
 
-h2 {
-    padding-top: 20px;
-    color: var(--white);
+.college {
+    padding: 0 20px;
     text-align: center;
 }
 
+.college strong {
+    font-weight: 600;
+}
+
+section h2 {
+    padding-top: 20px;
+    color: var(--white);
+    text-align: center;
+    font-size: 2rem;
+}
+
 .projects-section {
-    height: 90vh;
+    height: auto;
 }
 
 .projects-section h2 {
+    margin-bottom: 50px;
     display: block;
 }
 
 .container-projects {
     display: flex;
-    height: 70vh;
+    height: auto;
     justify-content: center;
     align-items: center;
     gap: 30px;
     flex-wrap: wrap;
+    gap: 50px;
 }
 
 .container-projects article {
-    width: 20vw;
-    height: 50vh;
-    border: 1px solid var(--white);
+    width: 38vw;
+    height: auto;
+    border: 1px solid var(--zinc);
     border-top: none;
     border-radius: 0px 0px 5px 5px;
     display: flex;
@@ -273,26 +346,133 @@ h2 {
 
 .container-projects article h3 {
     background-color: var(--white);
-    width: 100%;
+    width: calc(100% + 2px);
     color: var(--black);
     text-align: center;
     margin-bottom: 10px;
+    margin-top: -10px;
+    border-radius: 10px 10px 0 0;
 }
 
 .img-project {
-    width: 90%;
+    width: 85%;
+    border-radius: 5px;
 }
 
-.habilities {
-    height: 100vh;
+.abilities {
+    height: auto;
 }
 
 .contact {
+    height: auto;
+}
+
+.project-repo {
+    display: flex;
+    gap: 30px;
+}
+
+.project-repo a {
+    text-decoration: none;
+}
+
+.project-buttons {
+    background-color: var(--white );
+    border-radius: 5px;
+    display: flex;
+    padding: 3px 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    box-shadow: 7px 6px 50px 2px rgba(200, 200, 200, 0.12);
+    margin: 10px 0 15px 0;
+}
+
+.project-buttons img {
+    width: 30px;
+    margin-right: 5px;
+}
+
+.project-buttons:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.container-projects article> p {
+    width: 100%;
+    margin: 10px 0px 5px 0;
+    padding: 15px 25px;
+    background-color: var(--third-color);
+    border-bottom: 1px solid var(--zinc);
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
+.contact-form {
+    width: 70%;
+    padding: 20px;
+    color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+
+.button-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-submit:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    background-color: var(--black);
+}
+
 @media screen and (max-width: 900px) {
-    .menuToggle {
+
+    .menuToggle,
+    nav>input {
         display: block;
     }
 
@@ -320,4 +500,25 @@ h2 {
     .nav-items>li>a {
         color: var(--black);
     }
+
+    .themeText {
+        display: block;
+    }
+
+    .themeToggle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .container-projects {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .container-projects article {
+        width: 90%;
+    }
+
 }

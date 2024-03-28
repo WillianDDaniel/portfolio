@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Portifólio Willian D. Daniel - Desenvolvedor Web</title>
+
+    <title>Portifólio Willian D. Daniel - Desenvolvedor Full Stack</title>
+
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/png">
+
 </head>
 
 <body>
@@ -19,9 +23,22 @@
         <ul class="nav-items">
             <li><a href="#">Inicio</a></li>
             <li><a href="#about-me">Sobre</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Habilidades</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#abilities">Habilidades</a></li>
             <li><a href="#">Contato</a></li>
+
+            <li>
+                <div>
+                    <div class="themeToggle">
+                        <label class="themeText">White Mode</label>
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        <label for="checkbox" class="label">
+                            <div class="box"></div>
+                        </label>
+                    </div>
+                </div>
+            </li>
+
         </ul>
 
         <div class="menuToggle">
@@ -31,25 +48,36 @@
         </div>
 
     </nav>
+
     <header>
-        <div class="main-header">
+        <div id="main-left">
 
-            <div id="main-left">
-
-                <p>Construindo o futuro da web com: <br>
-                    <span class="main-span">criatividade, código <br> e comprometimento.</span>
+            <div class="header-text">
+                <p class="header-sm-text">
+                    Construindo o futuro da web com
                 </p>
-                <div class="icons-social">
-                    <a href="https://www.linkedin.com/in/willian-d-daniel/" target="_blank"><img
-                            src="./img/linkedin.png" alt=""></a>
-                    <a href="https://github.com/WillianDDaniel" target="_blank"><img src="./img/github.png" alt=""></a>
+                <div class="header-lg-text">
+                    <span>Criatividade, Código</span>
+                    <span>e Comprometimento.</span>
                 </div>
             </div>
 
-            <div id="main-right">
-                <img src="./img/main.svg" class="main-img">
+            <div class="icons-social">
+                <a href="https://www.linkedin.com/in/willian-d-daniel/" target="_blank">
+                    <img src="./assets/img/linkedin.png" alt="Linkedin-Willian-D-Daniel"
+                        title="LinkedIn Willian D. Daniel"></a>
+
+                <a href="https://github.com/WillianDDaniel" target="_blank">
+                    <img src="./assets/img/github.png" alt="Github-Willian-D-Daniel"
+                        title="GitHub Willian D. Daniel"></a>
             </div>
+
         </div>
+
+        <div id="main-right">
+            <img src="./assets/img/main.svg" class="main-img">
+        </div>
+
     </header>
 
     <section id="about-me" class="about-me-section">
@@ -60,17 +88,22 @@
 
             <div class="container-photo">
                 <div class="photo-about-me">
+                    <img src="assets\img\profile-img-Willian-Daniel.jpg" alt="">
                 </div>
 
-                <h3>Willian Deiviti Daniel</h3>
-                <p>Brasileiro</p>
-                <p>31 anos</p>
-                <p>Mora em Cachoerinha/RS</p>
-
+                <div class="about-me-info">
+                    <h3>Willian Deiviti Daniel</h3>
+                    <p>Brasileiro</p>
+                    <p>32 anos</p>
+                    <p class="college">Cursando: <strong>Análise e
+                            Desenvolvimento de Sistemas</strong>
+                    </p>
+                    <p>Cachoerinha - RS/BR</p>
+                </div>
             </div>
 
             <div class="bio-about-me">
-                <h3>Desenvolvedor Web</h3>
+                <h3>Desenvolvedor Full Stack</h3>
 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Totam quibusdam voluptate odio est mollitia consequuntur
@@ -95,54 +128,219 @@
         <h2>Projetos</h2>
 
         <div class="container-projects">
+
             <article>
-                <h3> Projeto 01</h3>
-                <img src="./img/projeto1.png" alt="projeto01" class="img-project">
-                <p>Lorem ipsum dolor sit amet, consectetur 
-                    adipisicing elit. Necessitatibus officia 
+                <h3>Personagens de Dragon Ball</h3>
+                <img src="./assets/img/projects-screenshots/projeto-DragonBall-info.jpg" 
+                    alt="Personagens de Dragon Ball"
+                    class="img-project">
+                <p>
+                    Este é um projeto pessoal desenvolvido com Next.js, React e Tailwind CSS, apresentando
+                    informações e imagens dos personagens do anime Dragon Ball. O design é responsivo e construído
+                    como uma SPA (Single Page Application), com os dados sobre os personagens provenientes de uma
+                    API desenvolvida por mim.
                 </p>
+
+                <div class="project-repo">
+
+                    <a href="https://github.com/WillianDDaniel/Dragon-Ball-Characters" target="_blank">
+                        <button class="project-buttons">
+                            <img src="./assets/img/github-no-bg.png"
+                                alt="repositorio github dragon ball characters">
+
+                            <p>Repositório</p>
+                        </button>
+                    </a>
+
+                    <a href="https://dragon-ball-characters-nu.vercel.app/" target="_blank">
+                        <button class="project-buttons">
+                            <img src="./assets/img/live.png" alt="projeto dragon ball characters">
+                            <p>Projeto ao vivo</p>
+                        </button>
+                    </a>
+
+                </div>
             </article>
-            
+
             <article>
-                <h3> Projeto 01</h3>
-                <img src="./img/projeto1.png" alt="projeto01" class="img-project">
-                <p>Lorem ipsum dolor sit amet, consectetur 
-                    adipisicing elit. Necessitatibus officia 
+                <h3>Online Web Tools</h3>
+                <img src="./assets/img/projects-screenshots/online-web-tools.jpg" 
+                    alt="online-web-tools" class="img-project">
+                <p>
+                    Projeto construído utilizando HTML, CSS e JavaScript Puro. São 4 ferramentas,
+                    Sorteador de números, Conversor de Texto, Contador de Caracteres e Gerador de Senhas.
+                    Este um projeto pessoal, não utilizei nenhuma biblioteca, o site conta com design responsivo e 
+                    um botão para alternar entre Dark e Light mode desenvolvido por mim.
                 </p>
+
+                <div class="project-repo">
+
+                    <a href="https://github.com/WillianDDaniel/online-web-tools" target="_blank">
+                        <button class="project-buttons">
+                            <img src="./assets/img/github-no-bg.png" 
+                                alt="repositorio-online-web-tools">
+                            
+                            <p>Repositório</p>
+                        </button>
+                    </a>
+
+                    <a href="https://willianddaniel.github.io/online-web-tools/" target="_blank">
+                        <button class="project-buttons">
+                            <img src="./assets/img/live.png" 
+                                alt="projeto-online-web-tools">
+                            
+                            <p>Projeto ao vivo</p>
+                        </button>
+                    </a>
+                </div>
             </article>
-            
+
             <article>
-                <h3> Projeto 01</h3>
-                <img src="./img/projeto1.png" alt="projeto01" class="img-project">
-                <p>Lorem ipsum dolor sit amet, consectetur 
-                    adipisicing elit. Necessitatibus officia 
+                <h3>API Personagens de Anime</h3>
+                <img src="./assets/img/projects-screenshots/API-anime-characters.jpg" 
+                    alt="API Personagens de Animes"
+                    class="img-project">
+                <p>
+                    Esta é uma API desenvolvida por mim utilizando Node.js e Express, que retorna imagens e informações sobres os personagens
+                    de Naruto e Dragon Ball. Está API foi construída para me servir os dados necessários,
+                    para construir os projetos referentes, aqui citados entre os demais projetos.
                 </p>
+
+                <div class="project-repo">
+                    <a href="https://github.com/WillianDDaniel/Anime-Characters-Backend" target="_blank">
+                        <button class="project-buttons">
+                            <img src="./assets/img/github-no-bg.png" 
+                                alt="Repositório Api Personagens de Anime">
+                            
+                            <p>Repositório</p>
+                        </button>
+                    </a>
+                    <a href="https://anime-characters-backend.vercel.app/" target="_blank">
+                        <button class="project-buttons">
+                            <img src="./assets/img/documentation.png" alt="Documentacao API anime characters">
+                            
+                            <p>Documentação</p>
+                        </button>
+                    </a>
+                </div>
             </article>
-            
+
             <article>
-                <h3> Projeto 01</h3>
-                <img src="./img/projeto1.png" alt="projeto01" class="img-project">
-                <p>Lorem ipsum dolor sit amet, consectetur 
-                    adipisicing elit. Necessitatibus officia 
+                <h3>Consulta Clima e Temperatura</h3>
+                <img src="./assets/img/projects-screenshots/Consulta-Clima-Tempo.jpg" alt="projeto01"
+                    class="img-project">
+                <p>
+                    Projeto web usando HTML, CSS e JavaScript para exibir temperatura atual por cidade. Integramos a API
+                    do OpenWeather para fornecer dados precisos e em tempo real, entregando uma interface responsiva e
+                    informativa aos usuários.
                 </p>
+
+                <div class="project-repo">
+                    <button class="project-buttons">
+                        <img src="./assets/img/github-no-bg.png">
+
+                        <p>Repositório</p>
+
+                    </button>
+
+                    <button class="project-buttons">
+                        <img src="./assets/img/live.png">
+
+                        <p>Projeto ao vivo</p>
+
+                    </button>
+                </div>
             </article>
+
+            <article>
+                <h3>Personagens de Naruto</h3>
+                <img src="./assets/img/projects-screenshots/projeto-naruto-info.jpg" alt="projeto01"
+                    class="img-project">
+                <p>
+                    Projeto web usando HTML, CSS e JavaScript para exibir temperatura atual por cidade. Integramos a API
+                    do OpenWeather para fornecer dados precisos e em tempo real, entregando uma interface responsiva e
+                    informativa aos usuários.
+                </p>
+
+                <div class="project-repo">
+                    <button class="project-buttons">
+                        <img src="./assets/img/github-no-bg.png">
+
+                        <p>Repositório</p>
+
+                    </button>
+
+                    <button class="project-buttons">
+                        <img src="./assets/img/live.png">
+
+                        <p>Projeto ao vivo</p>
+
+                    </button>
+                </div>
+            </article>
+
+            <article>
+                <h3>App Previsão do Tempo</h3>
+                <img src="./assets/img/projects-screenshots/projeto-naruto-info.jpg" alt="projeto01"
+                    class="img-project">
+                <p>
+                    Projeto web usando HTML, CSS e JavaScript para exibir temperatura atual por cidade. Integramos a API
+                    do OpenWeather para fornecer dados precisos e em tempo real, entregando uma interface responsiva e
+                    informativa aos usuários.
+                </p>
+
+                <div class="project-repo">
+                    <button class="project-buttons">
+                        <img src="./assets/img/github-no-bg.png">
+
+                        <p>Repositório</p>
+
+                    </button>
+
+                    <button class="project-buttons">
+                        <img src="./assets/img/live.png">
+
+                        <p>Projeto ao vivo</p>
+
+                    </button>
+                </div>
+            </article>
+
         </div>
 
     </section>
 
-    <section id="habilities" class="habilities">
+    <section id="abilities" class="abilities">
         <h2>Habilidades</h2>
     </section>
 
     <section id="contact" class="contact">
         <h2>Contato</h2>
+
+        <div class="container-form">
+
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button class="button-submit" type="submit">Submit</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-
+        <p>Portifólio <strong> Willian D. Daniel</strong>. Todos os direitos reservados &copy; 2024 | Desenvolvido com
+            ❤️ por Willian D. Daniel</p>
     </footer>
-
-
 </body>
 
 </html>
