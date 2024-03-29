@@ -6,26 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/png">
 
     <title>Portifólio Willian D. Daniel - Desenvolvedor Full Stack</title>
 
-    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/png">
+    <meta name="description" content="Portifólio de projetos de Willian D. Daniel.
+        Desenvolvedor Full Stack">
 
+    <meta name="keywords" content="Portifólio, Projetos, 
+        Full Stack, Projetos React, Projetos de Sites, Desenvolvedor Web">
+
+    <meta name="author" content="Willian Deiviti Daniel">
 </head>
 
 <body>
-    <nav>
+    <nav id="home">
         <!-- This input is hide -->
         <input type="checkbox">
 
         <h1 class="logo">Willian<span>D</span>Daniel</h1>
 
         <ul class="nav-items">
-            <li><a href="#">Inicio</a></li>
+            <li><a href="#home">Inicio</a></li>
             <li><a href="#about-me">Sobre</a></li>
             <li><a href="#projects">Projetos</a></li>
             <li><a href="#abilities">Habilidades</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#contact">Contato</a></li>
 
             <li>
                 <div>
@@ -50,7 +56,7 @@
     </nav>
 
     <header>
-        <div id="main-left">
+        <div id="main-left" class="main-left">
 
             <div class="header-text">
                 <p class="header-sm-text">
@@ -64,17 +70,16 @@
 
             <div class="icons-social">
                 <a href="https://www.linkedin.com/in/willian-d-daniel/" target="_blank">
-                    <img src="./assets/img/linkedin.png" alt="Linkedin-Willian-D-Daniel"
+                    <img src="./assets/img/linkedin.png" alt="Linkedin Willian D. Daniel"
                         title="LinkedIn Willian D. Daniel"></a>
 
                 <a href="https://github.com/WillianDDaniel" target="_blank">
-                    <img src="./assets/img/github.png" alt="Github-Willian-D-Daniel"
+                    <img src="./assets/img/github.png" alt="Github Willian D. Daniel"
                         title="GitHub Willian D. Daniel"></a>
             </div>
-
         </div>
 
-        <div id="main-right">
+        <div id="main-right" class="main-right">
             <img src="./assets/img/main.svg" class="main-img">
         </div>
 
@@ -105,16 +110,25 @@
             <div class="bio-about-me">
                 <h3>Desenvolvedor Full Stack</h3>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Totam quibusdam voluptate odio est mollitia consequuntur
-                    tempore fugiat nihil neque numquam cumque error voluptas
-                    quam, eius ipsum nobis, omnis aliquam nam.
+                <p class="text-lg-screen">
+                    Olá! Sou um <strong>desenvolvedor Full Stack</strong> em transição de carreira, com 8 anos de experiência na área de
+                    social media e atendimento a clientes. Minha jornada no desenvolvimento começou como um hobby que
+                    rapidamente se tornou minha paixão. Atualmente, estou cursando<strong> Análise e Desenvolvimento de Sistemas</strong>
+                    para formalizar e expandir meu conhecimento.
                 </p>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Totam quibusdam voluptate odio est mollitia consequuntur
-                    tempore fugiat nihil neque numquam cumque error voluptas
-                    quam, eius ipsum nobis, omnis aliquam nam.
+                <p class="text-lg-screen">
+                    Tenho uma sólida compreensão de tecnologias <strong>front-end</strong> como <strong> React, JavaScript, CSS3 e HTML5</strong>, utilizadas
+                    para criar interfaces dinâmicas e responsivas que proporcionam experiências de usuário excepcionais.
+                    Além disso, estou constantemente explorando e aprendendo mais sobre<strong> Vue.js, Node.js e PHP</strong>, buscando expandir
+                    meu conjunto de habilidades.
+                </p>
+                <p class="text-sm-screen">
+                    Sou um <strong>desenvolvedor Full Stack</strong> em transição de carreira, 
+                    com 8 anos de experiência em social media e atendimento a clientes. 
+                    Minha paixão pelo desenvolvimento começou como um hobby e agora estou 
+                    cursando <strong> Análise e Desenvolvimento de Sistemas</strong> para expandir meu conhecimento. 
+                    Possuo experiência em tecnologias <strong>front-end e back-end</strong> como <strong> React, Vue.js, JavaScript, CSS3 e HTML5, Node.js e PHP</strong>, 
+                    criando interfaces dinâmicas e responsivas. 
                 </p>
 
             </div>
@@ -131,9 +145,8 @@
 
             <article>
                 <h3>Personagens de Dragon Ball</h3>
-                <img src="./assets/img/projects-screenshots/projeto-DragonBall-info.jpg" 
-                    alt="Personagens de Dragon Ball"
-                    class="img-project">
+                <img src="./assets/img/projects-screenshots/projeto-DragonBall-info.jpg"
+                    alt="Personagens de Dragon Ball" class="img-project">
                 <p>
                     Este é um projeto pessoal desenvolvido com Next.js, React e Tailwind CSS, apresentando
                     informações e imagens dos personagens do anime Dragon Ball. O design é responsivo e construído
@@ -145,8 +158,7 @@
 
                     <a href="https://github.com/WillianDDaniel/Dragon-Ball-Characters" target="_blank">
                         <button class="project-buttons">
-                            <img src="./assets/img/github-no-bg.png"
-                                alt="repositorio github dragon ball characters">
+                            <img src="./assets/img/github-no-bg.png" alt="repositorio github dragon ball characters">
 
                             <p>Repositório</p>
                         </button>
@@ -164,12 +176,12 @@
 
             <article>
                 <h3>Online Web Tools</h3>
-                <img src="./assets/img/projects-screenshots/online-web-tools.jpg" 
-                    alt="online-web-tools" class="img-project">
+                <img src="./assets/img/projects-screenshots/online-web-tools.jpg" alt="online-web-tools"
+                    class="img-project">
                 <p>
                     Projeto construído utilizando HTML, CSS e JavaScript Puro. São 4 ferramentas,
                     Sorteador de números, Conversor de Texto, Contador de Caracteres e Gerador de Senhas.
-                    Este um projeto pessoal, não utilizei nenhuma biblioteca, o site conta com design responsivo e 
+                    Este um projeto pessoal, não utilizei nenhuma biblioteca, o site conta com design responsivo e
                     um botão para alternar entre Dark e Light mode desenvolvido por mim.
                 </p>
 
@@ -177,18 +189,16 @@
 
                     <a href="https://github.com/WillianDDaniel/online-web-tools" target="_blank">
                         <button class="project-buttons">
-                            <img src="./assets/img/github-no-bg.png" 
-                                alt="repositorio-online-web-tools">
-                            
+                            <img src="./assets/img/github-no-bg.png" alt="repositorio-online-web-tools">
+
                             <p>Repositório</p>
                         </button>
                     </a>
 
                     <a href="https://willianddaniel.github.io/online-web-tools/" target="_blank">
                         <button class="project-buttons">
-                            <img src="./assets/img/live.png" 
-                                alt="projeto-online-web-tools">
-                            
+                            <img src="./assets/img/live.png" alt="projeto-online-web-tools">
+
                             <p>Projeto ao vivo</p>
                         </button>
                     </a>
@@ -197,28 +207,27 @@
 
             <article>
                 <h3>API Personagens de Anime</h3>
-                <img src="./assets/img/projects-screenshots/API-anime-characters.jpg" 
-                    alt="API Personagens de Animes"
+                <img src="./assets/img/projects-screenshots/API-anime-characters.jpg" alt="API Personagens de Animes"
                     class="img-project">
                 <p>
-                    Esta é uma API desenvolvida por mim utilizando Node.js e Express, que retorna imagens e informações sobres os personagens
-                    de Naruto e Dragon Ball. Está API foi construída para me servir os dados necessários,
+                    Esta é uma API desenvolvida por mim utilizando Node.js e Express, que retorna imagens e informações
+                    sobres os personagens
+                    de Naruto e Dragon Ball. Esta API foi construída para me servir os dados necessários,
                     para construir os projetos referentes, aqui citados entre os demais projetos.
                 </p>
 
                 <div class="project-repo">
                     <a href="https://github.com/WillianDDaniel/Anime-Characters-Backend" target="_blank">
                         <button class="project-buttons">
-                            <img src="./assets/img/github-no-bg.png" 
-                                alt="Repositório Api Personagens de Anime">
-                            
+                            <img src="./assets/img/github-no-bg.png" alt="Repositório Api Personagens de Anime">
+
                             <p>Repositório</p>
                         </button>
                     </a>
                     <a href="https://anime-characters-backend.vercel.app/" target="_blank">
                         <button class="project-buttons">
                             <img src="./assets/img/documentation.png" alt="Documentacao API anime characters">
-                            
+
                             <p>Documentação</p>
                         </button>
                     </a>
@@ -230,25 +239,26 @@
                 <img src="./assets/img/projects-screenshots/Consulta-Clima-Tempo.jpg" alt="projeto01"
                     class="img-project">
                 <p>
-                    Projeto web usando HTML, CSS e JavaScript para exibir temperatura atual por cidade. Integramos a API
+                    Projeto web usando HTML, CSS e JavaScript para exibir temperatura atual por cidade. Integrada a API
                     do OpenWeather para fornecer dados precisos e em tempo real, entregando uma interface responsiva e
                     informativa aos usuários.
                 </p>
 
                 <div class="project-repo">
-                    <button class="project-buttons">
-                        <img src="./assets/img/github-no-bg.png">
+                    <a href="https://github.com/WillianDDaniel/consult-weather" target="_blank">
+                        <button class="project-buttons">
+                            <img src="./assets/img/github-no-bg.png" alt="repositorio consultar clima e temperatura">
 
-                        <p>Repositório</p>
+                            <p>Repositório</p>
+                        </button>
+                    </a>
+                    <a href="https://willianddaniel.github.io/consult-weather" target="_blank">
+                        <button class="project-buttons">
+                            <img src="./assets/img/live.png" alt="consultar clima e temperatura ao vivo">
 
-                    </button>
-
-                    <button class="project-buttons">
-                        <img src="./assets/img/live.png">
-
-                        <p>Projeto ao vivo</p>
-
-                    </button>
+                            <p>Projeto ao vivo</p>
+                        </button>
+                    </a>
                 </div>
             </article>
 
@@ -263,30 +273,34 @@
                 </p>
 
                 <div class="project-repo">
-                    <button class="project-buttons">
-                        <img src="./assets/img/github-no-bg.png">
+                    <a href="https://github.com/WillianDDaniel/naruto-characters" target="_blank">
+                        <button class="project-buttons">
+                            <img src="./assets/img/github-no-bg.png">
 
-                        <p>Repositório</p>
+                            <p>Repositório</p>
+                        </button>
+                    </a>
 
-                    </button>
+                    <a href="https://willianddaniel.github.io/naruto-characters/" target="_blank">
+                        <button class="project-buttons">
+                            <img src="./assets/img/live.png">
 
-                    <button class="project-buttons">
-                        <img src="./assets/img/live.png">
-
-                        <p>Projeto ao vivo</p>
-
-                    </button>
+                            <p>Projeto ao vivo</p>
+                        </button>
+                    </a>
                 </div>
             </article>
 
             <article>
-                <h3>App Previsão do Tempo</h3>
-                <img src="./assets/img/projects-screenshots/projeto-naruto-info.jpg" alt="projeto01"
+                <h3>PDV Restaurantes Electron + React</h3>
+                <img src="./assets/img/projects-screenshots/Pdv-Restaurante-Electron.jpg" alt="projeto01"
                     class="img-project">
                 <p>
-                    Projeto web usando HTML, CSS e JavaScript para exibir temperatura atual por cidade. Integramos a API
-                    do OpenWeather para fornecer dados precisos e em tempo real, entregando uma interface responsiva e
-                    informativa aos usuários.
+                    (Em Desenvolvimento) - Projeto criado com Electron + React + Sqlite. Se trata de um PDV (Ponto de
+                    Venda)
+                    para Restaurantes. Este projeto contará com cadastro de items e complementos no cardápio, registro
+                    de vendas e relatórios
+                    de performance de vendas, entre outras funcionalidades.
                 </p>
 
                 <div class="project-repo">
@@ -300,7 +314,7 @@
                     <button class="project-buttons">
                         <img src="./assets/img/live.png">
 
-                        <p>Projeto ao vivo</p>
+                        <p>Download Preview</p>
 
                     </button>
                 </div>

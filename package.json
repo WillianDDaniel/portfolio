@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-willian-d-daniel",
+  "version": "1.0.0",
+  "description": "This is my personal portfolio as a FullStack devloper",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "fullStack",
+    "portfolio"
+  ],
+  "author": "Willian D. Daniel",
+  "license": "ISC",
+  "dependencies": {
+    "lightningcss": "^1.24.1",
+    "vite": "^5.2.6"
+  }
+}

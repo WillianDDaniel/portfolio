@@ -191,7 +191,7 @@ header {
     font-style: italic;
 }
 
-#main-left {
+.main-left {
     display: flex;
     height: 65%;
     color: #ffffff;
@@ -202,7 +202,7 @@ header {
     flex-direction: column;
 }
 
-#main-left img {
+.main-left img {
     width: 45px;
     margin: 10px;
     border-radius: 5px;
@@ -224,9 +224,8 @@ header {
     align-items: center;
 }
 
-#main-right {
+.main-right {
     margin-bottom: 100px;
-    
 }
 
 .main-img {
@@ -277,8 +276,9 @@ header {
 .bio-about-me p {
     width: 100%;
     text-align: center;
-    padding: 20px 30px;
+    padding: 15px 30px;
     text-align: left;
+    font-size: 0.9rem;
 }
 
 .photo-about-me img {
@@ -288,7 +288,7 @@ header {
     border-radius: 50%;
     background-size: cover;
     background-position: 0px -7px;
-    border: 2px solid #fff;
+    border: 3px solid #fff;
 }
 .about-me-info {
     display: flex;
@@ -469,6 +469,10 @@ footer {
     background-color: var(--black);
 }
 
+.text-sm-screen {
+    display: none;
+}
+
 @media screen and (max-width: 900px) {
 
     .menuToggle,
@@ -521,4 +525,139 @@ footer {
         width: 90%;
     }
 
+}
+
+@media screen and (max-width: 430px) {
+
+    .logo {
+        font-size: 1.8rem;
+        margin-right: 60px;
+    }
+
+    header {
+        height: auto;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .main-left {
+        justify-content: start;
+        height: auto;
+        order: 2;
+        margin-bottom: 25px;
+    }
+
+    .header-text {
+        width: 100%;
+        justify-content: start;
+        margin-top: 0px;
+    }
+
+    .header-sm-text {
+        font-size: 1.2rem;
+    }
+
+    .header-lg-text {
+        font-size: 1.7rem;
+    }
+
+    .icons-social {
+        width: auto;
+    }
+
+    .main-right {
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-right img {
+        width: 50%;
+        
+    }
+
+    .about-me-section {
+        height: auto;
+    }
+
+    .container-about-me {
+        flex-direction: column;
+    }
+
+    .container-photo {
+        width: 90%;
+        border-radius: 5px;
+        height: auto;
+        padding-bottom: 30px;
+        gap: 0;
+    }
+
+    .photo-about-me img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .bio-about-me {
+        width: 95%;
+        height: auto;
+        margin-top: 20px;
+        font-size: 0.70rem;
+        margin-bottom: 15px;
+    }
+
+    .bio-about-me h3 {
+        font-size: 1.1rem;
+    }
+
+    .text-lg-screen {
+        display: none;
+    }
+
+    .text-sm-screen {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .logo {
+        font-size: 1.5rem;
+        margin-right: 60px;
+    }
+
+    .header-sm-text {
+        font-size: 1rem;
+    }
+
+    .header-lg-text {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .logo {
+        font-size: 1.3rem;
+        margin-right: 60px;
+    }
+
+    .main-right img {
+        width: 60%;
+    }
+
+    .header-sm-text {
+        font-size: 0.9rem;
+    }
+
+    .header-lg-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 280px) {
+
+    .logo {
+        font-size: 1.2rem;
+    }
 }
