@@ -359,14 +359,6 @@ section h2 {
     border-radius: 5px;
 }
 
-.abilities {
-    height: auto;
-}
-
-.contact {
-    height: auto;
-}
-
 .project-repo {
     display: flex;
     gap: 30px;
@@ -410,11 +402,47 @@ section h2 {
     text-align: justify;
 }
 
+.abilities {
+    height: auto;
+}
+
+.abilities h2 {
+    margin: 40px 0 25px 0;
+}
+
+.abilities-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 10%;
+    justify-content: center;
+    color: var(--white);
+}
+
+.abilities-container div {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.abilities-container div img {
+    width: 60%;
+    box-shadow: 7px 6px 50px 2px rgba(200, 200, 200, 0.1);
+    border-radius: 50%;
+}
+
+.contact {
+    height: auto;
+    margin-top: 40px;
+}
+
 .container-form {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 }
 
 .contact-form {
@@ -470,6 +498,10 @@ footer {
 }
 
 .text-sm-screen {
+    display: none;
+}
+
+footer br {
     display: none;
 }
 
@@ -618,6 +650,55 @@ footer {
     .text-sm-screen {
         display: inline-block;
     }
+
+    .project-repo {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .project-repo a {
+        margin: 0 15px ;
+    }
+
+    .abilities-container div {
+        font-size: 0.9rem;
+    }
+
+    .abilities-container span {
+        text-align: center;
+    }
+
+    .contact {
+        margin-top: 30px;
+    }
+
+    .container-form {
+        height: auto;
+        width: 100%;
+    }
+
+    .contact-form {
+        width: 85%;
+        margin: 30px 0 60px 0;
+    }
+
+    footer {
+        height: auto;
+        padding: 20px;
+    }
+
+    footer br {
+        display: block;
+    }
+
+    footer span {
+        display: none;
+    }
+
+    footer p {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 360px) {
@@ -632,6 +713,10 @@ footer {
 
     .header-lg-text {
         font-size: 1.3rem;
+    }
+
+    .project-repo {
+        gap: 5px;
     }
 }
 
@@ -653,11 +738,27 @@ footer {
     .header-lg-text {
         font-size: 1.2rem;
     }
+
+    .project-repo {
+        gap: 5px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    .abilities-container div {
+        font-size: 0.9rem;
+    }
 }
 
 @media screen and (max-width: 280px) {
 
     .logo {
         font-size: 1.2rem;
+    }
+
+    .abilities-container div {
+        font-size: 0.75rem;
     }
 }
