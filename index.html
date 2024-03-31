@@ -335,7 +335,7 @@
     <section id="abilities" class="abilities">
         <h2 class="section-title text-white">Habilidades</h2>
 
-        <div class="abilities-container">
+        <div class="abilities-container text-white" id="abilities-container">
             <div>
                 <img src="./assets/img/technologies/react-js-logo.png" alt="">
                 React
@@ -361,7 +361,7 @@
                 Vue.Js
             </div>
             <div>
-                <img src="./assets/img/technologies/tailwind-logo.png" alt="">
+                <img id="tailwind-logo" src="./assets/img/technologies/tailwind-logo.png" alt="">
                 <span>Tailwind CSS</span>
             </div>
             <div>
@@ -378,15 +378,15 @@
 
             <form action="#" method="post" class="contact-form">
                 <div class="form-group">
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name" required>
+                    <label class="contact-label" for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required autocomplete="name">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <label class="contact-label" for="email">Email:</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
                 </div>
                 <div class="form-group">
-                    <label for="message">Mensagem:</label>
+                    <label class="contact-label" for="message">Mensagem:</label>
                     <textarea id="message" name="message" rows="4" required></textarea>
                 </div>
                 <button class="button-submit" type="submit">Submit</button>
@@ -394,7 +394,13 @@
         </div>
     </section>
 
-    <footer>
+    <div class="turn-back-top-off" id="turn-back-top">
+        <a href="#home">
+            <img src="./assets/img/back-to-top.png" alt="Voltar ao Topo">
+        </a>
+    </div>
+
+    <footer id="footer">
         <p>Portifólio <strong> Willian D. Daniel</strong>. Todos os direitos reservados &copy; 2024 <br><span>|</span> Desenvolvido com
             ❤️ por Willian D. Daniel</p>
     </footer>

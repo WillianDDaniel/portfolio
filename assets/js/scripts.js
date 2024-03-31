@@ -35,6 +35,9 @@ function applyLightTheme() {
     document.getElementById('bio-about-me').classList.remove('dark-border-bio-about-me')
     document.getElementById('bio-about-me').classList.add('light-border-bio-about-me')
 
+    document.getElementById('abilities-container').classList.remove('text-white')
+    document.getElementById('abilities-container').classList.add('text-black')
+
     const sectionTitles = document.getElementsByClassName('section-title')
     Array.from(sectionTitles).forEach(element => {
         element.classList.remove('text-white')
@@ -56,6 +59,12 @@ function applyLightTheme() {
     const repoButtons = document.getElementsByClassName('project-repo')
     Array.from(repoButtons).forEach(element => {
         element.classList.add('light-bg-article-repo')
+    })
+
+    const contactLabels = document.getElementsByClassName('contact-label')
+    Array.from(contactLabels).forEach(element => {
+        element.classList.add('text-black')
+        element.classList.remove('text-white')
     })
 
     localStorage.setItem('themeMode', 'whiteMode')
@@ -83,6 +92,9 @@ function applyDarkTheme() {
     document.getElementById('bio-about-me').classList.add('dark-border-bio-about-me')
     document.getElementById('bio-about-me').classList.remove('light-border-bio-about-me')
 
+    document.getElementById('abilities-container').classList.add('text-white')
+    document.getElementById('abilities-container').classList.remove('text-black')
+
     const sectionTitles = document.getElementsByClassName('section-title')
     Array.from(sectionTitles).forEach(element => {
         element.classList.add('text-white')
@@ -106,5 +118,40 @@ function applyDarkTheme() {
         element.classList.remove('light-bg-article-repo')
     })
 
+    const contactLabels = document.getElementsByClassName('contact-label')
+    Array.from(contactLabels).forEach(element => {
+        element.classList.remove('text-black')
+        element.classList.add('text-white')
+    })
+
     localStorage.setItem('themeMode', 'darkMode')
 }
+
+window.onscroll = function () {
+
+    if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
+        document.getElementById("turn-back-top").classList.add('turn-back-top-on')
+        document.getElementById("turn-back-top").classList.remove('turn-back-top-off')
+    } else {
+        document.getElementById("turn-back-top").classList.remove('turn-back-top-on')
+        document.getElementById("turn-back-top").classList.add('turn-back-top-off')
+    }
+
+    const turnBackButton = document.getElementById('turn-back-top');
+    const footer = document.getElementById('footer');
+
+    let turnBackButtonTop = turnBackButton.getBoundingClientRect().top;
+    let footerTop = footer.getBoundingClientRect().top;
+    let distance = footerTop - (turnBackButtonTop + turnBackButton.offsetHeight);
+
+    if(distance < 30) {
+        document.getElementById('turn-back-top').classList.add('turn-back-top-margin')
+    } else {
+        document.getElementById('turn-back-top').classList.remove('turn-back-top-margin')
+    }
+}
+
+
+
+
+
