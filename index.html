@@ -19,7 +19,7 @@
     <meta name="author" content="Willian Deiviti Daniel">
 </head>
 
-<body>
+<body class="dark-bg">
     <nav id="home">
         <!-- This input is hide -->
         <input type="checkbox">
@@ -35,11 +35,10 @@
 
             <li>
                 <div>
-                    <div class="themeToggle">
+                    <div class="themeToggle" id="themeToggle">
                         <label class="themeText">White Mode</label>
-                        <input type="checkbox" name="checkbox" id="checkbox">
-                        <label for="checkbox" class="label">
-                            <div class="box"></div>
+                        <label id="label" class="label">
+                            <div id="box" class="box"></div>
                         </label>
                     </div>
                 </div>
@@ -59,16 +58,16 @@
         <div id="main-left" class="main-left">
 
             <div class="header-text">
-                <p class="header-sm-text">
+                <p class="header-sm-text" id="header-sm-text">
                     Construindo o futuro da web com
                 </p>
-                <div class="header-lg-text">
+                <div class="header-lg-text text-white" id="header-lg-text">
                     <span>Criatividade, Código</span>
                     <span>e Comprometimento.</span>
                 </div>
             </div>
 
-            <div class="icons-social">
+            <div class="icons-social dark-shadow-icons-social" id="icons-social">
                 <a href="https://www.linkedin.com/in/willian-d-daniel/" target="_blank">
                     <img src="./assets/img/linkedin.png" alt="Linkedin Willian D. Daniel"
                         title="LinkedIn Willian D. Daniel"></a>
@@ -87,11 +86,11 @@
 
     <section id="about-me" class="about-me-section">
 
-        <h2>Sobre mim</h2>
+        <h2 class="section-title text-white">Sobre mim</h2>
 
         <article class="container-about-me">
 
-            <div class="container-photo">
+            <div class="container-photo black-bg-conteiner-photo" id="container-photo">
                 <div class="photo-about-me">
                     <img src="assets\img\profile-img-Willian-Daniel.jpg" alt="">
                 </div>
@@ -107,7 +106,7 @@
                 </div>
             </div>
 
-            <div class="bio-about-me">
+            <div class="bio-about-me dark-border-bio-about-me" id="bio-about-me">
                 <h3>Desenvolvedor Full Stack</h3>
 
                 <p class="text-lg-screen">
@@ -144,15 +143,15 @@
 
     <section id="projects" class="projects-section">
 
-        <h2>Projetos</h2>
+        <h2 class="section-title text-white">Projetos</h2>
 
         <div class="container-projects">
 
             <article>
-                <h3>Personagens de Dragon Ball</h3>
+                <h3 class="articles-title dark-bg-article-h3">Personagens de Dragon Ball</h3>
                 <img src="./assets/img/projects-screenshots/projeto-DragonBall-info.jpg"
                     alt="Personagens de Dragon Ball" class="img-project">
-                <p>
+                <p class="articles-text dark-bg-article-p">
                     Este é um projeto pessoal desenvolvido com Next.js, React e Tailwind CSS, apresentando
                     informações e imagens dos personagens do anime Dragon Ball. O design é responsivo e construído
                     como uma SPA (Single Page Application), com os dados sobre os personagens provenientes de uma
@@ -180,10 +179,10 @@
             </article>
 
             <article>
-                <h3>Online Web Tools</h3>
+                <h3 class="articles-title dark-bg-article-h3">Online Web Tools</h3>
                 <img src="./assets/img/projects-screenshots/online-web-tools.jpg" alt="online-web-tools"
                     class="img-project">
-                <p>
+                <p class="articles-text dark-bg-article-p">
                     Projeto construído utilizando HTML, CSS e JavaScript Puro. São 4 ferramentas,
                     Sorteador de números, Conversor de Texto, Contador de Caracteres e Gerador de Senhas.
                     Este é um projeto pessoal, não utilizei nenhuma biblioteca, o site conta com design responsivo e
@@ -211,10 +210,10 @@
             </article>
 
             <article>
-                <h3>API Personagens de Anime</h3>
+                <h3 class="articles-title dark-bg-article-h3">API Personagens de Anime</h3>
                 <img src="./assets/img/projects-screenshots/API-anime-characters.jpg" alt="API Personagens de Animes"
                     class="img-project">
-                <p>
+                <p class="articles-text dark-bg-article-p">
                     Esta é uma API desenvolvida por mim utilizando Node.js e Express, que retorna imagens e informações
                     sobres os personagens
                     de Naruto e Dragon Ball. Esta API foi construída para me servir os dados necessários,
@@ -240,10 +239,10 @@
             </article>
 
             <article>
-                <h3>Consulta Clima e Temperatura</h3>
+                <h3 class="articles-title dark-bg-article-h3">Consulta Clima e Temperatura</h3>
                 <img src="./assets/img/projects-screenshots/Consulta-Clima-Tempo.jpg"
                     alt="Consultar Clima Temperatura WebSite" class="img-project">
-                <p>
+                <p class="articles-text dark-bg-article-p">
                     Projeto web usando HTML, CSS e JavaScript para exibir temperatura atual por cidade. Integrada a API
                     do OpenWeather para fornecer dados precisos e em tempo real, entregando uma interface responsiva e
                     informativa aos usuários.
@@ -268,13 +267,13 @@
             </article>
 
             <article>
-                <h3>Personagens de Naruto</h3>
+                <h3 class="articles-title dark-bg-article-h3">Personagens de Naruto</h3>
                 <img src="./assets/img/projects-screenshots/projeto-naruto-info.jpg"
                     alt="Projeto Personagens de Naruto Site" class="img-project">
-                <p>
+                <p class="articles-text dark-bg-article-p">
                     Este é um projeto similar ao primeiro, porém, construído em HTML, CSS e JavaScript Puro. Exibindo
                     Informações e imagens do anime Naruto. Com design responsivo, você pode acessar o site de qualquer
-                    dispositvo. Os dados são provenientes de uma API Construída por mim.
+                    dispositvo. Os dados são provenientes de uma API construída por mim.
                 </p>
 
                 <div class="project-repo">
@@ -297,10 +296,10 @@
             </article>
 
             <article>
-                <h3>PDV Restaurantes Electron + React</h3>
+                <h3 class="articles-title dark-bg-article-h3">PDV Restaurantes Electron + React</h3>
                 <img src="./assets/img/projects-screenshots/Pdv-Restaurante-Electron.jpg"
                     alt="Projeto PDV para Restaurantes em Electron e React" class="img-project">
-                <p>
+                <p class="articles-text dark-bg-article-p">
                     (Em Desenvolvimento) - Projeto criado com Electron + React + Sqlite. Se trata de um PDV (Ponto de
                     Venda)
                     para Restaurantes. Este projeto contará com cadastro de items e complementos no cardápio, registro
@@ -334,7 +333,7 @@
     </section>
 
     <section id="abilities" class="abilities">
-        <h2>Habilidades</h2>
+        <h2 class="section-title text-white">Habilidades</h2>
 
         <div class="abilities-container">
             <div>
@@ -373,7 +372,7 @@
     </section>
 
     <section id="contact" class="contact">
-        <h2>Contato</h2>
+        <h2 class="section-title text-white">Contato</h2>
 
         <div class="container-form">
 
@@ -399,6 +398,7 @@
         <p>Portifólio <strong> Willian D. Daniel</strong>. Todos os direitos reservados &copy; 2024 <br><span>|</span> Desenvolvido com
             ❤️ por Willian D. Daniel</p>
     </footer>
+    <script type="module" src="./assets/js/scripts.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,135 @@
+:root {
+    --white: #fff;
+    --black: #101010;
+
+    --main-dk-color: #040427;
+    --secondary-dk-color: #07024a;
+    --third-dk-color: #060522;
+
+    --dark-bg-color: linear-gradient(180deg, rgba(13, 8, 30, 1) 25%,
+            rgba(10, 6, 23, 1) 50%,
+            rgba(7, 4, 15, 1) 75%);
+
+    --zinc: #52595a;
+}
+
+/* config for the toggle Theme Button */
+.themeText {
+    display: none;
+}
+
+.label {
+    display: flex;
+    background: rgb(87, 58, 255);
+    width: 3.5rem;
+    border-radius: 1.5rem;
+    padding: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    margin-left: 5px;
+}
+
+.box {
+    background-color: #13131f;
+    height: 0.9rem;
+    width: 0.9rem;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.box-checked {
+    transform: translateX(2.1rem);
+}
+
+.label-checked {
+    background-color: #f9f9f9;
+}
+
+/* End config for toggle Theme */
+
+
+/***** classes for dark-mode *****/
+
+.dark-bg {
+    background: var(--dark-bg-color);
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.dark-shadow-icons-social {
+    box-shadow: 7px 6px 50px 2px rgba(200, 200, 200, 0.12);
+}
+
+.black-bg-conteiner-photo {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.dark-border-bio-about-me {
+    border-right: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
+    color: var(--white);
+}
+
+.dark-bg-article-h3 {
+    color: var(--third-dk-color);
+    background-color: var(--white);
+}
+
+.dark-bg-article-p {
+    background-color: var(--third-dk-color);
+    border-bottom: 1px solid var(--zinc);
+    color: var(--white);
+}
+
+/* ************************************************************** */
+
+/***** classes for light-mode *****/
+
+.light-bg {
+    background-color: var(--white);
+}
+
+.text-black {
+    color: var(--secondary-dk-color);
+}
+
+.light-bg-header-sm {
+    background-color: var(--secondary-dk-color);
+    padding: 3px 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: var(--white);
+}
+
+.light-shadow-icons-social {
+    box-shadow: 7px 7px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+.light-bg-conteiner-photo {
+    background-color: var(--third-dk-color);
+    color: var(--white);
+}
+
+.light-border-bio-about-me {
+    border-right: 1px solid var(--third-dk-color);
+    border-bottom: 1px solid var(--third-dk-color);
+    color: var(--secondary-dk-color);
+}
+
+.light-bg-article-h3{
+    background-color: var(--secondary-dk-color);
+    color: var(--white);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.light-bg-article-repo {
+    background-color: var(--secondary-dk-color);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
