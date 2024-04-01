@@ -17,5 +17,8 @@
   "dependencies": {
     "lightningcss": "^1.24.1",
     "vite": "^5.2.6"
+  },
+  "devDependencies": {
+    "vite-plugin-webp-compress": "^1.1.4"
   }
 }

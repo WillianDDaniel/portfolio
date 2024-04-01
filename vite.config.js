@@ -1,5 +1,6 @@
 import { resolve } from 'path'
 import { defineConfig } from "vite";
+import VitePluginWebpCompress from 'vite-plugin-webp-compress';
 
 export default defineConfig({
     build: {
@@ -10,5 +11,11 @@ export default defineConfig({
                 main: resolve(__dirname, 'index.html'),
             },
         },
+        plugins: [
+            VitePluginWebpCompress()
+        ]
     }
 })
+
+
+
