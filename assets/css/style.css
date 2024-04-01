@@ -407,8 +407,10 @@ section h2 {
     border-radius: 10px;
 }
 
-#recatcha h3 {
+#recaptcha h3 {
     text-align: center;
+    width: 100%;
+    padding: 0 5px;
 }
 
 #msgSended {
@@ -428,11 +430,12 @@ section h2 {
     font-weight: 700;
 }
 
-
 .g-recaptcha {
     display: flex;
     justify-content: center;
-    padding: 50px 100px;
+    align-items: center;
+    padding: 50px 0px;
+    width: 100%;
 }
 
 .form-group {
@@ -845,6 +848,22 @@ footer br {
         width: 85%;
         margin: 30px 0 60px 0;
     }
+
+    .g-recaptcha > div{
+        display: flex;
+        justify-content: center;
+        width: 100% !important;
+    }
+    
+    .g-recaptcha > div > div{
+        display: flex;
+        justify-content: center;
+        width: 100% !important;
+    }
+    
+    .g-recaptcha iframe {
+        width: 85% !important;
+    }
 }
 
 @media screen and (max-width: 360px) {
@@ -868,6 +887,7 @@ footer br {
     .text-sm-screen {
         font-size: 0.95rem;
     }
+
 }
 
 @media screen and (max-width: 320px) {
