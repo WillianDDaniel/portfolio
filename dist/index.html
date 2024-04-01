@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/portfolio/assets/favicon-r5eN2HCj.png" type="image/png">
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <title>Portifólio Willian D. Daniel - Desenvolvedor Full Stack</title>
 
     <meta name="description" content="Portifólio de projetos de Willian D. Daniel.
@@ -16,8 +18,8 @@
         Full Stack, Projetos React, Projetos de Sites, Desenvolvedor Web">
 
     <meta name="author" content="Willian Deiviti Daniel">
-  <script type="module" crossorigin src="/portfolio/assets/main-BFsKUR2a.js"></script>
-  <link rel="stylesheet" crossorigin href="/portfolio/assets/main-CXSgX9PL.css">
+  <script type="module" crossorigin src="/portfolio/assets/main-BVezpmSC.js"></script>
+  <link rel="stylesheet" crossorigin href="/portfolio/assets/main-DVoJHRDB.css">
 </head>
 
 <body class="dark-bg">
@@ -377,20 +379,35 @@
 
         <div class="container-form">
 
-            <form action="#" method="post" class="contact-form">
+            
+            <div id="msgSended">Mensagem enviada com sucesso! <button id="closeMsg">X</button></div>
+            <form id="contact-form" class="contact-form">
+                
+                <div id="recaptcha" style="display: none;">
+
+                    <h3>Resolva o Captcha para enviar a Mensagem!</h3>
+
+                    <div class="g-recaptcha" data-callback='sendMessage'
+                        data-sitekey="6LcoIaspAAAAAMP3dNHGkYZgP0LaV3AHeVslrWSm"></div>
+                </div>
+
                 <div class="form-group">
                     <label class="contact-label" for="name">Nome:</label>
                     <input type="text" id="name" name="name" required autocomplete="name">
                 </div>
+
                 <div class="form-group">
                     <label class="contact-label" for="email">Email:</label>
                     <input type="email" id="email" name="email" required autocomplete="email">
                 </div>
+
                 <div class="form-group">
                     <label class="contact-label" for="message">Mensagem:</label>
                     <textarea id="message" name="message" rows="4" required></textarea>
                 </div>
-                <button class="button-submit" type="submit">Submit</button>
+
+                <button id="button-submit" class="button-submit" type="submit" value="Submit">Submit</button>
+
             </form>
         </div>
     </section>
@@ -402,9 +419,50 @@
     </div>
 
     <footer id="footer">
-        <p>Portifólio <strong> Willian D. Daniel</strong>. Todos os direitos reservados &copy; 2024 <br><span>|</span> Desenvolvido com
+        <p>Portifólio <strong> Willian D. Daniel</strong>. Todos os direitos reservados &copy; 2024 <br><span>|</span>
+            Desenvolvido com
             ❤️ por Willian D. Daniel</p>
-    </footer>
+    </footer>
+
+    <script>
+        function sendMessage() {
+
+            let formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            }
+
+            fetch("https://formsubmit.co/ajax/bf5fce1500010eb60533a865f093986c", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.log(error));
+
+            document.getElementById('recaptcha').style.display = 'none'
+
+            Array.from(document.getElementsByClassName('form-group')).forEach((element) => {
+                element.style.display = 'block'
+            })
+            document.getElementById('button-submit').style.display = 'block'
+
+            document.getElementById('name').value = ''
+            document.getElementById('email').value = ''
+            document.getElementById('message').value = ''
+
+            document.getElementById('msgSended').style.display = 'block'
+
+            document.getElementById('closeMsg').addEventListener('click', () => {
+                document.getElementById('msgSended').style.display = 'none'
+            })
+        }
+    </script>
 </body>
 
 </html>
