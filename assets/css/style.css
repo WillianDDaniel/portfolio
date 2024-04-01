@@ -864,6 +864,25 @@ footer br {
     .g-recaptcha iframe {
         width: 85% !important;
     }
+
+    body>div:last-child {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    body>div:last-child div {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 95% !important;
+    }
+
+    div > iframe {
+        transform:scale(0.9) !important;
+    }
+
 }
 
 @media screen and (max-width: 360px) {
@@ -888,6 +907,9 @@ footer br {
         font-size: 0.95rem;
     }
 
+    div > iframe {
+        transform:scale(0.8) !important;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -924,6 +946,10 @@ footer br {
     .text-sm-screen {
         font-size: 0.9rem;
     }
+
+    div > iframe {
+        transform:scale(0.7) !important;
+    }
 }
 
 @media screen and (max-width: 280px) {
@@ -942,5 +968,9 @@ footer br {
 
     .text-sm-screen {
         font-size: 0.8rem;
+    }
+
+    div > iframe {
+        transform:scale(0.6) !important;
     }
 }
