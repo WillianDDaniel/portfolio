@@ -854,6 +854,8 @@ footer br {
         justify-content: center;
         width: 100% !important;
     }
+
+    /* here below it's the config for google Recaptcha*/
     
     .g-recaptcha > div > div{
         display: flex;
@@ -869,7 +871,8 @@ footer br {
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
-        width: 100% !important;
+        width: 100vw !important;
+        left: 0 !important;
     }
 
     body>div:last-child div {
@@ -883,6 +886,7 @@ footer br {
         transform:scale(0.9) !important;
     }
 
+    /* ************************************ */
 }
 
 @media screen and (max-width: 360px) {
@@ -968,9 +972,5 @@ footer br {
 
     .text-sm-screen {
         font-size: 0.8rem;
-    }
-
-    div > iframe {
-        transform:scale(0.6) !important;
     }
 }
