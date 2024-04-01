@@ -220,6 +220,9 @@ header {
     text-align: center;
     padding: 15px 30px;
     text-align: left;
+}
+
+.text-lg-screen {
     font-size: 0.9rem;
 }
 
@@ -469,6 +472,18 @@ footer br {
     display: none;
 }
 
+@media screen and (max-width: 1024px) and (max-height: 570px) {
+    .text-lg-screen {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 945px) and (max-height: 620px) {
+    .text-lg-screen {
+        font-size: 0.8rem;
+    }
+}
+
 @media screen and (max-width: 900px) {
 
     .menuToggle,
@@ -512,6 +527,18 @@ footer br {
         gap: 5px;
     }
 
+    .header-sm-text {
+        font-size: 1.15rem;
+    }
+
+    .header-lg-text {
+        font-size: 1.9rem;
+    }
+
+    .main-right img {
+        width: 100%;
+    }
+
     .container-projects {
         height: auto;
         flex-direction: column;
@@ -521,6 +548,171 @@ footer br {
         width: 90%;
     }
 
+    .text-lg-screen {
+        font-size: 0.7rem;
+    }
+
+    .about-me-info p {
+        font-size: 0.9rem;
+    }
+
+    .about-me-info h3 {
+        font-size: 1rem;
+    }
+
+    footer {
+        height: auto;
+        padding: 20px;
+    }
+
+    footer br {
+        display: block;
+    }
+
+    footer span {
+        display: none;
+    }
+
+    footer p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 900px) and (max-height: 620px) {
+    .text-lg-screen {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 900px) and (max-height: 570px) {
+    .text-lg-screen {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 760px) {
+
+    header {
+        height: auto;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .main-left {
+        justify-content: start;
+        height: auto;
+        order: 2;
+        margin-bottom: 25px;
+    }
+
+    .header-sm-text {
+        font-size: 1.3rem;
+    }
+
+    .header-lg-text {
+        font-size: 2.2rem;
+    }
+
+    .main-right {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-right img {
+        width: 35%;
+        margin-top: 10px;
+    }
+
+    .text-lg-screen {
+        display: none;
+    }
+
+    .text-sm-screen {
+        display: inline-block;
+        font-size: 0.88rem;
+    }
+
+    .about-me-info p {
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .about-me-info h3 {
+        font-size: 0.9rem;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .turn-back-top-margin {
+        margin-bottom: 65px;
+    }
+
+    .turn-back-top-on img {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 760px) and (max-height: 620px) {
+    .text-sm-screen {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 760px) and (max-height: 570px) {
+    .text-sm-screen {
+        font-size: 0.87rem;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .header-sm-text {
+        font-size: 1.15rem;
+    }
+
+    .header-lg-text {
+        font-size: 1.8rem;
+    }
+
+    .main-right img {
+        width: 50%;
+    }
+
+    .container-about-me {
+        flex-direction: column;
+    }
+
+    .about-me-section {
+        height: auto;
+    }
+
+    .container-photo {
+        width: 90%;
+        border-radius: 5px;
+        height: auto;
+        padding-bottom: 30px;
+        gap: 0;
+    }
+
+    .bio-about-me {
+        width: 95%;
+        height: auto;
+    }
+
+    .text-sm-screen {
+        font-size: 1rem;
+    }
+
+    .about-me-info p {
+        font-size: 1rem;
+    }
+
+    .turn-back-top-on {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 430px) {
@@ -528,12 +720,6 @@ footer br {
     .logo {
         font-size: 1.8rem;
         margin-right: 60px;
-    }
-
-    header {
-        height: auto;
-        flex-wrap: nowrap;
-        flex-direction: column;
     }
 
     .main-left {
@@ -550,7 +736,11 @@ footer br {
     }
 
     .header-sm-text {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    .light-bg-header-sm {
+        padding: 3px 10px;
     }
 
     .header-lg-text {
@@ -569,35 +759,12 @@ footer br {
         justify-content: center;
     }
 
-    .main-right img {
-        width: 50%;
-
-    }
-
-    .about-me-section {
-        height: auto;
-    }
-
-    .container-about-me {
-        flex-direction: column;
-    }
-
-    .container-photo {
-        width: 90%;
-        border-radius: 5px;
-        height: auto;
-        padding-bottom: 30px;
-        gap: 0;
-    }
-
     .photo-about-me img {
         width: 130px;
         height: 130px;
     }
 
     .bio-about-me {
-        width: 95%;
-        height: auto;
         margin-top: 20px;
         font-size: 0.70rem;
         margin-bottom: 15px;
@@ -605,14 +772,6 @@ footer br {
 
     .bio-about-me h3 {
         font-size: 1.1rem;
-    }
-
-    .text-lg-screen {
-        display: none;
-    }
-
-    .text-sm-screen {
-        display: inline-block;
     }
 
     .project-repo {
@@ -646,27 +805,6 @@ footer br {
         width: 85%;
         margin: 30px 0 60px 0;
     }
-
-    footer {
-        height: auto;
-        padding: 20px;
-    }
-
-    footer br {
-        display: block;
-    }
-
-    footer span {
-        display: none;
-    }
-
-    footer p {
-        text-align: center;
-    }
-
-    .turn-back-top-on {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 360px) {
@@ -685,6 +823,10 @@ footer br {
 
     .project-repo {
         gap: 5px;
+    }
+
+    .text-sm-screen {
+        font-size: 0.95rem;
     }
 }
 
@@ -718,6 +860,10 @@ footer br {
     .abilities-container div {
         font-size: 0.9rem;
     }
+
+    .text-sm-screen {
+        font-size: 0.9rem;
+    }
 }
 
 @media screen and (max-width: 280px) {
@@ -728,5 +874,13 @@ footer br {
 
     .abilities-container div {
         font-size: 0.75rem;
+    }
+
+    .header-sm-text {
+        font-size: 0.8rem;
+    }
+
+    .text-sm-screen {
+        font-size: 0.8rem;
     }
 }
