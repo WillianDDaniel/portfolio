@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeMode = localStorage.getItem('themeMode')
 
-    if (themeMode === null || '' || undefined) {
+    if (themeMode === null || themeMode === '' || themeMode === undefined) {
         localStorage.setItem('themeMode', 'darkMode')
     }
-    themeMode === 'darkMode' ? '' : applyLightTheme()
+
+    themeMode === 'whiteMode' ? applyLightTheme() : ""
 })
 
 document.getElementById('themeToggle').addEventListener('click', () => {
@@ -144,7 +145,7 @@ window.onscroll = function () {
     let footerTop = footer.getBoundingClientRect().top;
     let distance = footerTop - (turnBackButtonTop + turnBackButton.offsetHeight);
 
-    if(distance < 30) {
+    if (distance < 30) {
         document.getElementById('turn-back-top').classList.add('turn-back-top-margin')
     } else {
         document.getElementById('turn-back-top').classList.remove('turn-back-top-margin')
